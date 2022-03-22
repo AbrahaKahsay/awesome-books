@@ -6,6 +6,3 @@ function CreateBooks(title, author){
 }
 
 const firstBook = new CreateBooks("The Alchemist", "Paulo Cohleo");
-
-
-
