@@ -60,10 +60,14 @@ function addBkToInterface(book){
 function createRemoveBtn(){
     const removeBtn =  document.createElement('button');
     removeBtn.textContent = 'Remove';
-    removeBtn.addEventListener('click', () => {
-        console.log('remove button clicked');
-    });
+    removeBtn.addEventListener('click', removeBkInterface)
     return removeBtn;
+}
+
+// remove a book from the booklist application interface
+function removeBkInterface(event){
+    event.target.parentElement.remove();
+    return;
 }
 
 addBtn.addEventListener('click', () => {
