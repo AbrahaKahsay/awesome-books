@@ -53,6 +53,9 @@ function addBkToInterface(book){
     newBook.appendChild(author);
     //Add a remove button to the book div
     newBook.appendChild(createRemoveBtn());
+    //  create a horizontal rule & append to div
+    const hr = document.createElement('hr');
+    newBook.appendChild(hr);
     bookList.append(newBook);
     return newBook;
 }
@@ -83,12 +86,9 @@ addBtn.addEventListener('click', () => {
         const book = addBook(title, author);
         //add book to the interface
         addBkToInterface(book);
-
         // clear the form fields
         document.getElementById('author').value = '';
         document.getElementById('title').value = '';
-
-
     }
 
     // if any field is empty, do nothing
@@ -96,5 +96,9 @@ addBtn.addEventListener('click', () => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
+
+    if(books.length < 1) return;
+
     books.forEach(book => addBkToInterface(book));
+    return;
 })
