@@ -40,16 +40,30 @@ function removeBook(id){
 
 // Add a book to the application interface
 function addBkToInterface(book){
+    //create div element to hold the title & author
     const newBook = document.createElement('div');
     newBook.setAttribute('id', book.id);
+    //create title div
     const title = document.createElement('p');
     title.textContent = book.title;
     newBook.appendChild(title);
+    //  create author div
     const author = document.createElement('p');
     author.textContent = book.author
     newBook.appendChild(author);
+    //Add a remove button to the book div
+    newBook.appendChild(createRemoveBtn());
     bookList.append(newBook);
     return newBook;
+}
+
+function createRemoveBtn(){
+    const removeBtn =  document.createElement('button');
+    removeBtn.textContent = 'Remove';
+    removeBtn.addEventListener('click', () => {
+        console.log('remove button clicked');
+    });
+    return removeBtn;
 }
 
 addBtn.addEventListener('click', () => {
