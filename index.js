@@ -83,7 +83,12 @@ addBtn.addEventListener('click', () => {
         const book = addBook(title, author);
         //add book to the interface
         addBkToInterface(book);
-        return;
+
+        // clear the form fields
+        document.getElementById('author').value = '';
+        document.getElementById('title').value = '';
+
+
     }
 
     // if any field is empty, do nothing
