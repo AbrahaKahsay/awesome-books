@@ -1,4 +1,4 @@
-const books = [
+let books = [
     { 
         title: 'Easy Code',
         author: 'Abraha',
@@ -27,4 +27,10 @@ function addBook(title, author){
     }
     books.push(book);
     return book;
+}
+
+function removeBook(id){
+    const newBooks = books.filter(book => book.id!==id);
+    books = newBooks;
+    return books;
 }
