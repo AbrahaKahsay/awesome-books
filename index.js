@@ -1,29 +1,8 @@
 const addBtn =  document.getElementById('add-btn');
 const bookList = document.getElementById('booklist');
-
-console.log(addBtn);
-console.log(bookList)
-let books = [
-    // { 
-    //     title: 'Easy Code',
-    //     author: 'Abraha',
-    //     id:1
-    // },
-    // {
-    //     title: 'Hard Code',
-    //     author: 'Diego',
-    //     id:2
-    // },
-    // {
-    //     title: 'Javacript for all',
-    //     author: 'Francis',
-    //     id:3
-    // }
-];
+let books = [];
 
 function addBook(title, author){
-    
-
     const book = {
         title:title,
         author: author,
@@ -37,6 +16,7 @@ function addBook(title, author){
 function removeBook(id){
     const newBooks = books.filter(book => book.id!==id);
     books = newBooks;
+    localStorage.setItem('books', JSON.stringify(books))
     return books;
 }
 
@@ -92,7 +72,6 @@ addBtn.addEventListener('click', () => {
         document.getElementById('author').value = '';
         document.getElementById('title').value = '';
     }
-
     // if any field is empty, do nothing
     return;
 });
