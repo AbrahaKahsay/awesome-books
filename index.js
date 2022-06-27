@@ -66,7 +66,12 @@ function createRemoveBtn(){
 
 // remove a book from the booklist application interface
 function removeBkInterface(event){
+    // get the  id of the book to be deleted
+    const id =  +event.target.parentElement.id;
+    //remove book from application interface
     event.target.parentElement.remove();
+    //remove book from books array
+    removeBook(id);
     return;
 }
 
