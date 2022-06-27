@@ -4,30 +4,33 @@ const bookList = document.getElementById('booklist');
 console.log(addBtn);
 console.log(bookList)
 let books = [
-    { 
-        title: 'Easy Code',
-        author: 'Abraha',
-        id:1
-    },
-    {
-        title: 'Hard Code',
-        author: 'Diego',
-        id:2
-    },
-    {
-        title: 'Javacript for all',
-        author: 'Francis',
-        id:3
-    }
+    // { 
+    //     title: 'Easy Code',
+    //     author: 'Abraha',
+    //     id:1
+    // },
+    // {
+    //     title: 'Hard Code',
+    //     author: 'Diego',
+    //     id:2
+    // },
+    // {
+    //     title: 'Javacript for all',
+    //     author: 'Francis',
+    //     id:3
+    // }
 ];
 
 function addBook(title, author){
+    
+
     const book = {
         title:title,
         author: author,
         id: books.length + 1
     }
     books.push(book);
+    localStorage.setItem('books', JSON.stringify(books))
     return book;
 }
 
@@ -36,7 +39,6 @@ function removeBook(id){
     books = newBooks;
     return books;
 }
-
 
 // Add a book to the application interface
 function addBkToInterface(book){
@@ -96,9 +98,8 @@ addBtn.addEventListener('click', () => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-
-    if(books.length < 1) return;
-
+    if(!localStorage.getItem('books')) return;
+    books = JSON.parse(localStorage.getItem('books'));
     books.forEach(book => addBkToInterface(book));
     return;
 })
