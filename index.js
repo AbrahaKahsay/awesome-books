@@ -37,6 +37,33 @@ function removeBook(id){
     return books;
 }
 
+
+// Add a book to the application interface
+function addBkToInterface(book){
+    const newBook = document.createElement('div');
+    newBook.setAttribute('id', book.id);
+    const title = document.createElement('p');
+    title.textContent = book.title;
+    newBook.appendChild(title);
+    const author = document.createElement('p');
+    author.textContent = book.author
+    newBook.appendChild(author);
+    bookList.append(newBook);
+    return newBook;
+}
+
 addBtn.addEventListener('click', () => {
-    console.log('btn clicked')
+    const author = document.getElementById('author').value;
+    const title = document.getElementById('title').value;
+    if(author && title){
+        //add book to array
+        const book = addBook(title, author);
+        //add book to the interface
+        addBkToInterface(book);
+        
+    }
+
+    // if any field is empty, do nothing
+    return;
+    
 })
