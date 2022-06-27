@@ -60,7 +60,7 @@ addBtn.addEventListener('click', () => {
         const book = addBook(title, author);
         //add book to the interface
         addBkToInterface(book);
-        
+        return;
     }
 
     // if any field is empty, do nothing
