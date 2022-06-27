@@ -65,5 +65,8 @@ addBtn.addEventListener('click', () => {
 
     // if any field is empty, do nothing
     return;
-    
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    books.forEach(book => addBkToInterface(book));
 })
