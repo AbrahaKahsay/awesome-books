@@ -1,13 +1,12 @@
 class Book {
-  constructor(title, author, id){
-      this.title = title;
-      this.author = author;
-      this.id = id;
-  };
-};
+  constructor(title, author, id) {
+    this.title = title;
+    this.author = author;
+    this.id = id;
+  }
+}
 
-class UI  {
-
+class UI {
   books = [];
 
   addBook(book) {
@@ -15,10 +14,10 @@ class UI  {
     localStorage.setItem('books', JSON.stringify(this.books));
     console.log(this.books);
     return book;
-  };
+  }
 
   removeBook(event) {
-    //remove element from interaface
+    // remove element from interaface
     const id = +event.target.parentElement.id;
     event.target.parentElement.remove();
     // remove element from array
@@ -26,14 +25,14 @@ class UI  {
     this.books = newBooks;
     localStorage.setItem('books', JSON.stringify(this.books));
     return this.books;
-  };
+  }
 
   createRemoveBtn() {
     const removeBtn = document.createElement('button');
     removeBtn.textContent = 'Remove';
     removeBtn.addEventListener('click', this.removeBook);
     return removeBtn;
-  };
+  }
 
   // Add a book to the application interface
   addBkToInterface(book) {
@@ -49,7 +48,6 @@ class UI  {
     by.textContent = 'by';
     newBook.appendChild(by);
 
-
     //  create author div
     const author = document.createElement('p');
     author.textContent = book.author;
@@ -59,9 +57,8 @@ class UI  {
     //  create a horizontal rule & append to div
     bookList.append(newBook);
     return newBook;
-  };
-    
-};
+  }
+}
 
 const addBtn = document.getElementById('add-btn');
 const bookList = document.getElementById('booklist');
