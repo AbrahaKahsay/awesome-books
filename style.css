@@ -33,3 +33,18 @@ button {
   border: 3px solid black;
   padding: 4px 12px;
 }
+form {
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 50%;
+
+  /* align-items: center; */
+}
+
+button.btn {
+  display: flex;
+  align-self: flex-end;
+  width: 40px;
+}
