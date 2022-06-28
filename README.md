@@ -36,9 +36,11 @@ A project that implements adding or removing  books to or from a book list using
 - Twitter: [@twitterhandle](https://twitter.com/FrancisWayungi)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/francis-wayungi-3aa626231)
 
-👤 **Yilikal Teshome**
+👤 **Abraha Kahsay**
 
-- GitHub: [@githubhandle](https://github.com/AbrahaKahsay)
+- GitHub: [@AbrahaKahsay](https://github.com/AbrahaKahsay)
+- Twitter: [@Alamsbut](https://twitter.com/Alamsbut)
+- LinkedIn: [abraha-kahsay](www.linkedin.com/in/abraha-kahsay-492771135/)
 
 
 ## 🤝 Contributing
