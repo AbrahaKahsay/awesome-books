@@ -7,7 +7,7 @@ class Book {
 };
 
 class UI  {
-  
+
   books = [];
 
   addBook(book) {
@@ -17,29 +17,21 @@ class UI  {
     return book;
   };
 
-  removeBook(id) {
+  removeBook(event) {
+    //remove element from interaface
+    const id = +event.target.parentElement.id;
+    event.target.parentElement.remove();
+    // remove element from array
     const newBooks = books.filter((book) => book.id !== id);
     this.books = newBooks;
-    localStorage.setItem('books', JSON.stringify(books));
+    localStorage.setItem('books', JSON.stringify(this.books));
     return this.books;
-  };
-
-  // remove a book from the booklist application interface
-  removeBkInterface(event) {
-    // get the  id of the book to be deleted
-    const id = +event.target.parentElement.id;
-    // remove book from application interface
-    event.target.parentElement.remove();
-    return id;
-
-    // remove book from books array
-    removeBook(id);
   };
 
   createRemoveBtn() {
     const removeBtn = document.createElement('button');
     removeBtn.textContent = 'Remove';
-    removeBtn.addEventListener('click', this.removeBkInterface);
+    removeBtn.addEventListener('click', this.removeBook);
     return removeBtn;
   };
 
