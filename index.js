@@ -4,20 +4,18 @@ class Book {
       this.author = author;
       this.id = id;
   }
+
+ 
 }
 
 class UI  {
 
   books = [];
 
-  addBook(title, author) {
-    const book = {
-      title,
-      author,
-      id: books.length + 1,
-    };
-    books.push(book);
-    localStorage.setItem('books', JSON.stringify(books));
+  addBook(book) {
+    this.books.push(book);
+    localStorage.setItem('books', JSON.stringify(this.books));
+    console.log(this.books);
     return book;
   }
 
@@ -72,29 +70,18 @@ addBkToInterface(book) {
 const addBtn = document.getElementById('add-btn');
 const bookList = document.getElementById('booklist');
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+const ui = new UI();
 
 addBtn.addEventListener('click', () => {
   const author = document.getElementById('author').value;
   const title = document.getElementById('title').value;
+
   if (author && title) {
     // add book to array
-    const book = addBook(title, author);
+    const book = new Book(title, author, ui.books.length + 1);
+    ui.addBook(book);
+
+
     // add book to the interface
     addBkToInterface(book);
     // clear the form fields
