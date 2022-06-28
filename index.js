@@ -7,38 +7,29 @@ class Book {
 }
 
 class UI  {
-  
 
-}
+  books = [];
 
+  addBook(title, author) {
+    const book = {
+      title,
+      author,
+      id: books.length + 1,
+    };
+    books.push(book);
+    localStorage.setItem('books', JSON.stringify(books));
+    return book;
+  }
 
+  removeBook(id) {
+    const newBooks = books.filter((book) => book.id !== id);
+    books = newBooks;
+    localStorage.setItem('books', JSON.stringify(books));
+    return books;
+  }
 
-
-
-const addBtn = document.getElementById('add-btn');
-const bookList = document.getElementById('booklist');
-let books = [];
-
-function addBook(title, author) {
-  const book = {
-    title,
-    author,
-    id: books.length + 1,
-  };
-  books.push(book);
-  localStorage.setItem('books', JSON.stringify(books));
-  return book;
-}
-
-function removeBook(id) {
-  const newBooks = books.filter((book) => book.id !== id);
-  books = newBooks;
-  localStorage.setItem('books', JSON.stringify(books));
-  return books;
-}
-
-// remove a book from the booklist application interface
-function removeBkInterface(event) {
+  // remove a book from the booklist application interface
+  removeBkInterface(event) {
   // get the  id of the book to be deleted
   const id = +event.target.parentElement.id;
   // remove book from application interface
@@ -47,7 +38,7 @@ function removeBkInterface(event) {
   removeBook(id);
 }
 
-function createRemoveBtn() {
+createRemoveBtn() {
   const removeBtn = document.createElement('button');
   removeBtn.textContent = 'Remove';
   removeBtn.addEventListener('click', removeBkInterface);
@@ -55,7 +46,7 @@ function createRemoveBtn() {
 }
 
 // Add a book to the application interface
-function addBkToInterface(book) {
+addBkToInterface(book) {
   // create div element to hold the title & author
   const newBook = document.createElement('div');
   newBook.setAttribute('id', book.id);
@@ -74,7 +65,29 @@ function addBkToInterface(book) {
   newBook.appendChild(hr);
   bookList.append(newBook);
   return newBook;
+  }
+  
 }
+
+const addBtn = document.getElementById('add-btn');
+const bookList = document.getElementById('booklist');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 addBtn.addEventListener('click', () => {
   const author = document.getElementById('author').value;
