@@ -42,8 +42,14 @@ class UI  {
     newBook.setAttribute('id', book.id);
     // create title div
     const title = document.createElement('p');
-    title.textContent = book.title;
+    title.textContent = `"${book.title}"`;
     newBook.appendChild(title);
+
+    const by = document.createElement('p');
+    by.textContent = 'by';
+    newBook.appendChild(by);
+
+
     //  create author div
     const author = document.createElement('p');
     author.textContent = book.author;
@@ -51,8 +57,6 @@ class UI  {
     // Add a remove button to the book div
     newBook.appendChild(this.createRemoveBtn());
     //  create a horizontal rule & append to div
-    const hr = document.createElement('hr');
-    newBook.appendChild(hr);
     bookList.append(newBook);
     return newBook;
   };
