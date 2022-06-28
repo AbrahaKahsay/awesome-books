@@ -19,6 +19,12 @@ class UI  {
     return book;
   }
 
+
+
+
+
+
+
   removeBook(id) {
     const newBooks = books.filter((book) => book.id !== id);
     books = newBooks;
@@ -39,7 +45,7 @@ class UI  {
 createRemoveBtn() {
   const removeBtn = document.createElement('button');
   removeBtn.textContent = 'Remove';
-  removeBtn.addEventListener('click', removeBkInterface);
+  removeBtn.addEventListener('click', this.removeBkInterface);
   return removeBtn;
 }
 
@@ -57,7 +63,7 @@ addBkToInterface(book) {
   author.textContent = book.author;
   newBook.appendChild(author);
   // Add a remove button to the book div
-  newBook.appendChild(createRemoveBtn());
+  newBook.appendChild(this.createRemoveBtn());
   //  create a horizontal rule & append to div
   const hr = document.createElement('hr');
   newBook.appendChild(hr);
@@ -69,7 +75,6 @@ addBkToInterface(book) {
 
 const addBtn = document.getElementById('add-btn');
 const bookList = document.getElementById('booklist');
-
 const ui = new UI();
 
 addBtn.addEventListener('click', () => {
@@ -83,7 +88,10 @@ addBtn.addEventListener('click', () => {
 
 
     // add book to the interface
-    addBkToInterface(book);
+    ui.addBkToInterface(book);
+
+
+
     // clear the form fields
     document.getElementById('author').value = '';
     document.getElementById('title').value = '';
@@ -94,5 +102,5 @@ addBtn.addEventListener('click', () => {
 document.addEventListener('DOMContentLoaded', () => {
   if (!localStorage.getItem('books')) return;
   books = JSON.parse(localStorage.getItem('books'));
-  books.forEach((book) => addBkToInterface(book));
+  books.forEach((book) => ui.addBkToInterface(book));
 });
