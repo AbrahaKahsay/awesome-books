@@ -27,3 +27,9 @@ input[type="text"] {
   box-sizing: border-box;
   padding: 2px 5px;
 }
+
+button {
+  all: unset;
+  border: 3px solid black;
+  padding: 4px 12px;
+}
