@@ -1,3 +1,5 @@
+/* eslint-disable max-classes-per-file */
+const bookList = document.getElementById('booklist');
 class Book {
   constructor(title, author, id) {
     this.title = title;
@@ -12,7 +14,6 @@ class UI {
   addBook(book) {
     this.books.push(book);
     localStorage.setItem('books', JSON.stringify(this.books));
-    console.log(this.books);
     return book;
   }
 
@@ -21,7 +22,7 @@ class UI {
     const id = +event.target.parentElement.id;
     event.target.parentElement.remove();
     // remove element from array
-    const newBooks = books.filter((book) => book.id !== id);
+    const newBooks = this.books.filter((book) => book.id !== id);
     this.books = newBooks;
     localStorage.setItem('books', JSON.stringify(this.books));
     return this.books;
@@ -61,7 +62,6 @@ class UI {
 }
 
 const addBtn = document.getElementById('add-btn');
-const bookList = document.getElementById('booklist');
 const ui = new UI();
 
 addBtn.addEventListener('click', () => {
@@ -83,6 +83,6 @@ addBtn.addEventListener('click', () => {
 
 document.addEventListener('DOMContentLoaded', () => {
   if (!localStorage.getItem('books')) return;
-  books = JSON.parse(localStorage.getItem('books'));
+  const books = JSON.parse(localStorage.getItem('books'));
   books.forEach((book) => ui.addBkToInterface(book));
 });
