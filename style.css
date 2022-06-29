@@ -1,3 +1,7 @@
+* {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 .heading {
   text-align: center;
 }
@@ -49,7 +53,7 @@ button.btn {
 }
 
 
-nav.main-nav{
+nav {
   outline:1px solid black;
   display:flex;
   flex-direction: row;
@@ -57,6 +61,12 @@ nav.main-nav{
   padding:2px 30px;
   box-sizing:border-box;
 }
+
+nav p {
+  font-weight: bold;
+}
+
+
 
 .main-links {
   display:flex;
@@ -74,7 +84,6 @@ nav.main-nav{
   border-left:1px solid black;
   border-right:1px solid black;
   padding: 0  20px;
-
 }
 
 .main-links li a{
