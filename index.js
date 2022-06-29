@@ -1,5 +1,37 @@
 /* eslint-disable max-classes-per-file */
 const bookList = document.getElementById('booklist');
+const dateDiv =  document.getElementById('date');
+
+
+
+
+
+
+
+class MyTime {
+
+  nth = function(d) {
+    if (d > 3 && d < 21) return 'th';
+    switch (d % 10) {
+        case 1:  return "st";
+        case 2:  return "nd";
+        case 3:  return "rd";
+        default: return "th";
+    }
+  }
+  
+  formatedTime = () => {
+    const date = new Date();
+    const [hr, pm] = date.toLocaleString('en-US', { hour: 'numeric', hour12: true }).toString().split(' ')
+    const timeString = `${date.toLocaleString('default', { month: 'long' })} ${date.getDate()}${this.nth(date.getDate())} ${date.getFullYear()} ${hr}:${date.getMinutes()}:${date.getSeconds()} ${pm.toLowerCase()}`;
+    return timeString;
+  }
+}
+
+const appTime = new MyTime();
+setInterval( () =>{dateDiv.textContent = appTime.formatedTime()}, 1000); 
+
+
 class Book {
   constructor(title, author, id) {
     this.title = title;
