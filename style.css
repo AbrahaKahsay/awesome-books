@@ -92,6 +92,8 @@ div#date{
   display:flex;
   flex-direction: row;
   justify-content: flex-end;
+  margin-top:10px;
+  margin-bottom:20px;
 }
 
 footer{
@@ -105,7 +107,6 @@ footer{
 
 /* add book page style */
 .add-book {
-  outline:1px solid black;
   padding:50px 0;
   text-align: center;
 }
