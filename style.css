@@ -107,4 +107,9 @@ footer{
 .add-book {
   outline:1px solid black;
   padding:50px 0;
+  text-align: center;
+}
+
+.add-book h1{
+  margin-bottom:50px;
 }
