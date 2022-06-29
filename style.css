@@ -112,12 +112,19 @@ footer {
 .add-book {
   padding: 50px 0;
   text-align: center;
-  margin-bottom:30px;
+  margin-bottom: 30px;
   height: 50vh;
 }
 
 .add-book h1 {
   margin-bottom: 50px;
+}
+
+/* contact info style */
+.contact-info {
+  padding: 50px 15%;
+  margin-bottom: 30px;
+  height: 50vh;
 }
 
 /* dynamically assigned styles */
@@ -132,6 +139,3 @@ li a.active {
 .reveal {
   display: block;
 }
-
-
-
