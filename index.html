@@ -4,23 +4,54 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <title>Awesome Books</title>
   </head>
   <body>
-    <div class="books-container">
-      <div class="heading"><h1>Awesome Books</h1></div>
+    <!-- Add nav bar -->
+    <nav class="navbar">
+      <div>
+        <h3 id="bar-header">Awesome Books</h3>
+      </div>
+      <div class="nav-list">
+        <a id="list-link" href="#books">List</a>
+        <a id="add-new-link" class="add-new" href="#form">Add New</a>
+        <a id="contact-link" href="#contact">Contact</a>
+      </div>
+    </nav>
+
+    <!-- section 1 -->
+    <div id="books" class="books-container section">
+      <div class="heading"><h2>All awesome books</h2></div>
       <div class="book-list" id="booklist"></div>
-      <form>
-        <div class="title">
-          <input type="text" placeholder="Title" id="title" />
-        </div>
-        <div class="author">
-          <input type="text" placeholder="Author" id="author" />
-        </div>
-        <button class="btn" type="button" id="add-btn">Add</button>
-      </form>
     </div>
+    <!-- section 2 -->
+    <form id="form" class="section">
+      <h2>Add a new book</h2>
+      <div class="title">
+        <input type="text" placeholder="Title" id="title" />
+      </div>
+      <div class="author">
+        <input type="text" placeholder="Author" id="author" />
+      </div>
+      <button class="btn" type="button" id="add-btn">Add</button>
+    </form>
+
+    <!-- section 3 -->
+    <div id="contact" class="section">
+      <h2>Contact information</h2>
+      <p>Do you have any questions or do you just want to say "Hello"?</p>
+      <p>You can reachout to us!</p>
+      <ul>
+        <li>Our email: example23@gmail.com</li>
+        <li>Our phone number: +251945149</li>
+        <li>Our address: strict name 22,84503,Canada</li>
+      </ul>
+    </div>
+
+    <footer>
+      <h5 class="Copyright">Copyright</h5>
+    </footer>
 
     <script src="index.js"></script>
   </body>

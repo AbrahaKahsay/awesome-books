@@ -79,3 +79,42 @@ document.addEventListener('DOMContentLoaded', () => {
   books = JSON.parse(localStorage.getItem('books'));
   books.forEach((book) => addBkToInterface(book));
 });
+
+// Single Page Application
+const booksSection = document.getElementById('books');
+const addBookSection = document.getElementById('form');
+const contactSection = document.getElementById('contact');
+
+const listLink = document.getElementById('list-link');
+const addNewLink = document.getElementById('add-new-link');
+const contactLink = document.getElementById('contact-link');
+
+function loadContent() {
+  if (window.location.hash === '#books') {
+    booksSection.style.display = 'block';
+    addBookSection.style.display = 'none';
+    contactSection.style.display = 'none';
+
+    listLink.style.fontWeight = 'bold';
+    addNewLink.style.fontWeight = 'normal';
+    contactLink.style.fontWeight = 'normal';
+  } else if (window.location.hash === '#form') {
+    addBookSection.style.display = 'block';
+    booksSection.style.display = 'none';
+    contactSection.style.display = 'none';
+
+    listLink.style.fontWeight = 'normal';
+    addNewLink.style.fontWeight = 'bold';
+    contactLink.style.fontWeight = 'normal';
+  } else if (window.location.hash === '#contact') {
+    contactSection.style.display = 'block';
+    booksSection.style.display = 'none';
+    addBookSection.style.display = 'none';
+
+    listLink.style.fontWeight = 'normal';
+    addNewLink.style.fontWeight = 'normal';
+    contactLink.style.fontWeight = 'bold';
+  }
+}
+
+window.addEventListener('hashchange', loadContent);
