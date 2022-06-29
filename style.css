@@ -18,7 +18,7 @@ input[type="text"] {
 .book-list {
   border: 3px solid black;
   margin-bottom: 10px;
-  height:60vh;
+  height: 60vh;
   overflow-y: scroll;
 }
 
@@ -83,7 +83,7 @@ nav p {
 .main-links li .middle {
   border-left: 1px solid black;
   border-right: 1px solid black;
-  padding: 0  20px;
+  padding: 0 20px;
 }
 
 .main-links li a {
@@ -135,6 +135,7 @@ footer {
 .contact-info ul li {
   padding: 5px 0;
 }
+
 /* dynamically assigned styles */
 li a.active {
   color: blue;
