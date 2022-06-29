@@ -40,8 +40,6 @@ form {
   flex-direction: column;
   box-sizing: border-box;
   width: 50%;
-
-  /* align-items: center; */
 }
 
 button.btn {
