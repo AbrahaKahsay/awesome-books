@@ -127,6 +127,14 @@ footer {
   height: 50vh;
 }
 
+.contact-info h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.contact-info ul li {
+  padding: 5px 0;
+}
 /* dynamically assigned styles */
 li a.active {
   color: blue;
