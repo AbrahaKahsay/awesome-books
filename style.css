@@ -88,3 +88,9 @@ nav p {
   color:black;
 }
 
+
+div#date{
+  display:flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
