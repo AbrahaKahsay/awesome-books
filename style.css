@@ -114,6 +114,18 @@ footer{
   margin-bottom:50px;
 }
 
+/* dynamically assigned styles */
 li a.active {
   color:blue;
 }
+
+.hide {
+  display:none;
+}
+
+.reveal {
+  display: block;
+}
+
+
+

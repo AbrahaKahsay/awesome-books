@@ -12,7 +12,7 @@ const contact = document.getElementById('contact')
 addNew.addEventListener('click', (e) => {
   e.target.classList.add('active');
   list.classList.remove('active');
-  contact.classList.remove('active')
+  contact.classList.remove('active');
 });
 
 list.addEventListener('click', (e) => {
