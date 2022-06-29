@@ -1,3 +1,7 @@
+* {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 .heading {
   text-align: center;
 }
@@ -14,6 +18,8 @@ input[type="text"] {
 .book-list {
   border: 3px solid black;
   margin-bottom: 10px;
+  height: 60vh;
+  overflow-y: scroll;
 }
 
 .book-list div {
@@ -40,12 +46,105 @@ form {
   flex-direction: column;
   box-sizing: border-box;
   width: 50%;
-
-  /* align-items: center; */
 }
 
 button.btn {
   display: flex;
   align-self: flex-end;
   width: 40px;
+}
+
+nav {
+  outline: 1px solid black;
+  justify-content: space-between;
+  padding: 2px 30px;
+}
+
+nav,
+.main-links {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+}
+
+nav p {
+  font-weight: bold;
+}
+
+.main-links {
+  padding: 2px 10px;
+}
+
+.main-links li {
+  list-style: none;
+  padding: 0 20px;
+}
+
+.main-links li .middle {
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  padding: 0 20px;
+}
+
+.main-links li a {
+  text-decoration: none;
+  color: black;
+}
+
+div#date {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+footer {
+  border: 1px solid black;
+  padding: 15px 20px;
+  position: relative;
+  box-sizing: border-box;
+  bottom: 0;
+  text-align: center;
+}
+
+/* add book page style */
+.add-book {
+  padding: 50px 0;
+  text-align: center;
+  margin-bottom: 30px;
+  height: 50vh;
+}
+
+.add-book h1 {
+  margin-bottom: 50px;
+}
+
+/* contact info style */
+.contact-info {
+  padding: 50px 15%;
+  margin-bottom: 30px;
+  height: 50vh;
+}
+
+.contact-info h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.contact-info ul li {
+  padding: 5px 0;
+}
+
+/* dynamically assigned styles */
+li a.active {
+  color: blue;
+}
+
+.hide {
+  display: none;
+}
+
+.reveal {
+  display: block;
 }
