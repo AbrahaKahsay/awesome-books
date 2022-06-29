@@ -8,49 +8,47 @@
     <title>Awesome Books</title>
   </head>
   <body>
-    <!-- main navigation bar -->
-    <nav class="main-nav">
-      <h1>Awesome Books</h1>
-      <ul  class="main-links">
-        <li><a href="#" class="active" id="list">List</a></li>
-        <li><a href="#" class="middle" id="add-new">Add new</a></li>
-        <li><a href="#" id='contact'>Contact</a></li>
-      </ul>
-    </nav>
-    <!-- date below the navigation bar -->
-    <div id="date"></div>
-
-    <!-- list books page -->
-    <div class="books-container" id="book-con">
-      <div class="heading"><h1>All awesome Books</h1></div>
-      <div class="book-list" id="booklist"></div>
-    </div>
-
-    <!-- add book intarface -->
-    <div class="add-book hide" id="add-book">
-      <h2>Add a new book</h2>
-      <form>
-        <div class="title">
-          <input type="text" placeholder="Title" id="title" />
+    <div class="wrapper">
+      <!-- main navigation bar -->
+      <nav class="main-nav">
+        <h1>Awesome Books</h1>
+        <ul  class="main-links">
+          <li><a href="#" class="active" id="list">List</a></li>
+          <li><a href="#" class="middle" id="add-new">Add new</a></li>
+          <li><a href="#" id='contact'>Contact</a></li>
+        </ul>
+      </nav>
+      <!-- date below the navigation bar -->
+      <div id="date"></div>
+      <!-- list books page -->
+      <div class="books-container" id="book-con">
+        <div class="heading">
+          <h1>All awesome Books</h1>
         </div>
-        <div class="author">
-          <input type="text" placeholder="Author" id="author" />
-        </div>
-        <button class="btn" type="button" id="add-btn">Add</button>
-      </form>
+        <div class="book-list" id="booklist"></div>
+      </div>
+      <!-- add book intarface -->
+      <div class="add-book hide" id="add-book">
+        <h2>Add a new book</h2>
+        <form>
+          <div class="title">
+            <input type="text" placeholder="Title" id="title" />
+          </div>
+          <div class="author">
+            <input type="text" placeholder="Author" id="author" />
+          </div>
+          <button class="btn" type="button" id="add-btn">Add</button>
+        </form>
+      </div>
+      <!-- constact information div -->
+      <div class="contact-info hide" id="cont-info">
+        <h2>Contact information</h2>
+      </div>
+      <!-- page footer -->
+      <footer class="footer">
+      copyright 2022 Francis and Abraha, all rights reserved
+      </footer>
     </div>
-
-    <!-- constact information div -->
-    <div class="contact-info hide" id="cont-info">
-      <h2>Contact information</h2>
-    </div>
-
-
-    <!-- page footer -->
-    <footer class="footer">
-    copyright 2022 Francis and Abraha, all rights reserved
-    </footer>
-
     <script src="index.js"></script>
   </body>
 </html>

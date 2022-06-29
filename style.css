@@ -18,6 +18,8 @@ input[type="text"] {
 .book-list {
   border: 3px solid black;
   margin-bottom: 10px;
+  height:60vh;
+  overflow-y: scroll;
 }
 
 .book-list div {
@@ -128,3 +130,6 @@ li a.active {
 .reveal {
   display: block;
 }
+
+
+
