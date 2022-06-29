@@ -8,25 +8,21 @@
     <title>Awesome Books</title>
   </head>
   <body>
+    <!-- main navigation bar -->
+    <nav class="main-nav">
+      <p>Awesome Books</p>
+      <ul  class="main-links">
+        <li><a href="#" class="active">List</a></li>
+        <li><a href="#" class="middle">Add new</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+    <!-- date below the navigation bar -->
+    <div id="date"></div>
 
+    <!-- list books page -->
     <div class="books-container">
-
-      <!-- main navigation bar -->
-      <nav class="main-nav">
-        <p>Awesome Books</p>
-        <ul  class="main-links">
-          <li><a href="#" class="active">List</a></li>
-          <li><a href="#" class="middle">Add new</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </nav>
-      <!-- date below the navigation bar -->
-      <div id="date"></div>
-
-
-
       <div class="heading"><h1>All awesome Books</h1></div>
-      
       <div class="book-list" id="booklist"></div>
       <form>
         <div class="title">
@@ -38,6 +34,12 @@
         <button class="btn" type="button" id="add-btn">Add</button>
       </form>
     </div>
+
+
+    <!-- page footer -->
+    <footer class="footer">
+    copyright 2022 Francis and Abraha, all rights reserved
+    </footer>
 
     <script src="index.js"></script>
   </body>

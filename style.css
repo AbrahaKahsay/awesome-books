@@ -88,9 +88,17 @@ nav p {
   color:black;
 }
 
-
 div#date{
   display:flex;
   flex-direction: row;
   justify-content: flex-end;
+}
+
+footer{
+  border:1px solid black;
+  padding:15px 20px;
+  position:relative;
+  box-sizing: border-box;
+  bottom:0;
+  text-align: center;
 }
