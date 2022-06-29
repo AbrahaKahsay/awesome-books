@@ -113,3 +113,7 @@ footer{
 .add-book h1{
   margin-bottom:50px;
 }
+
+li a.active {
+  color:blue;
+}
