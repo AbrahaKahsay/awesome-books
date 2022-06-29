@@ -47,3 +47,13 @@ button.btn {
   align-self: flex-end;
   width: 40px;
 }
+
+
+nav.main-nav{
+  outline:1px solid black;
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding:2px 30px;
+  box-sizing:border-box;
+}
