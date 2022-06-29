@@ -1,14 +1,14 @@
 /* eslint-disable max-classes-per-file */
 const bookList = document.getElementById('booklist');
-const dateDiv =  document.getElementById('date');
+const dateDiv = document.getElementById('date');
 
 const bookContainer = document.getElementById('book-con');
 const addBookContainer = document.getElementById('add-book');
-const contactInformation =  document.getElementById('cont-info');
+const contactInformation = document.getElementById('cont-info');
 
 const list = document.getElementById('list');
-const addNew = document.getElementById('add-new')
-const contact = document.getElementById('contact')
+const addNew = document.getElementById('add-new');
+const contact = document.getElementById('contact');
 
 addNew.addEventListener('click', (e) => {
   e.target.classList.add('active');
@@ -16,7 +16,7 @@ addNew.addEventListener('click', (e) => {
   list.classList.remove('active');
   bookContainer.classList.add('hide');
   contact.classList.remove('active');
-  contactInformation.classList.add('hide')
+  contactInformation.classList.add('hide');
 });
 
 list.addEventListener('click', (e) => {
@@ -24,9 +24,8 @@ list.addEventListener('click', (e) => {
   bookContainer.classList.remove('hide');
   addNew.classList.remove('active');
   addBookContainer.classList.add('hide');
-  contact.classList.remove('active')
-  contactInformation.classList.add('hide')
-
+  contact.classList.remove('active');
+  contactInformation.classList.add('hide');
 });
 
 contact.addEventListener('click', (e) => {
@@ -36,32 +35,29 @@ contact.addEventListener('click', (e) => {
   bookContainer.classList.add('hide');
   addNew.classList.remove('active');
   addBookContainer.classList.add('hide');
-
 });
 
 class MyTime {
-
-  nth = function(d) {
+  nth = (d) => {
     if (d > 3 && d < 21) return 'th';
     switch (d % 10) {
-        case 1:  return "st";
-        case 2:  return "nd";
-        case 3:  return "rd";
-        default: return "th";
+      case 1: return 'st';
+      case 2: return 'nd';
+      case 3: return 'rd';
+      default: return 'th';
     }
   }
-  
+
   formatedTime = () => {
     const date = new Date();
-    const [hr, pm] = date.toLocaleString('en-US', { hour: 'numeric', hour12: true }).toString().split(' ')
+    const [hr, pm] = date.toLocaleString('en-US', { hour: 'numeric', hour12: true }).toString().split(' ');
     const timeString = `${date.toLocaleString('default', { month: 'long' })} ${date.getDate()}${this.nth(date.getDate())} ${date.getFullYear()} ${hr}:${date.getMinutes()}:${date.getSeconds()} ${pm.toLowerCase()}`;
     return timeString;
   }
 }
 
 const appTime = new MyTime();
-setInterval( () =>{dateDiv.textContent = appTime.formatedTime()}, 1000); 
-
+setInterval(() => { dateDiv.textContent = appTime.formatedTime(); }, 1000);
 
 class Book {
   constructor(title, author, id) {
