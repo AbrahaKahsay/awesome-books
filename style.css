@@ -112,6 +112,8 @@ footer {
 .add-book {
   padding: 50px 0;
   text-align: center;
+  margin-bottom:30px;
+  height: 50vh;
 }
 
 .add-book h1 {
